@@ -25,8 +25,10 @@ things that run in a browser. Now you build the servers those things talk to. To
 
 ## Quick Links
 
+- **[Syllabus](documents/syllabus.md)**
+- **[Tentative Schedule](documents/schedule.md)**
+- **[Slack guidelines](documents/slack-guidelines.md)**
 - **[Weekly notes](weekly/)** for each class session
-- **[Documents](documents/)**: syllabus, schedule, and project instructions
 - **[In-class activities](activities/)**
 - **[Starter code](https://github.com/IGM-RichMedia-at-RIT)**: the demo and assignment repos live in this same organization
 - **[myCourses](https://mycourses.rit.edu)** for assignments, grades, and deadlines
