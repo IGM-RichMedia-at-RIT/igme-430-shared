@@ -49,6 +49,27 @@ myCourses together.
 an app for something that works fine in a browser, and the Slack mobile app is the exception I
 make. It's the fastest way to reach me when something comes up the night before a deadline.
 
+### On your phone
+
+The mobile app doesn't put an RIT option on its sign-in screen, and **Sign in with Google will not
+get you in.** Use the workspace URL path instead:
+
+1. Install Slack from the App Store or Google Play and open it.
+2. Choose **Sign in with workspace URL**. On iOS it's hiding under "Having trouble?" on the email
+   screen.
+3. Enter `rit-community` as the workspace URL.
+4. Tap **Sign In with RIT**, then your normal RIT username and password.
+
+`rit-community` is the workspace that hands the app off to RIT authentication. Once you're through
+it you're signed in to every RIT workspace you belong to, this course included.
+
+**Already have Slack on your phone** for another RIT workspace? Swipe right for the channels menu,
+tap the workspace icon at the top left, then **Add a workspace → Sign in to another workspace**,
+and pick up from step 2.
+
+RIT's official version of these steps is
+[in the ITS knowledge base](https://help.rit.edu/sp?id=kb_article&table=kb_knowledge&sysparm_article=KB0043536).
+
 ---
 
 ## Channels
