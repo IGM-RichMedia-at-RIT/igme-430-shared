@@ -16,8 +16,8 @@ date, myCourses wins.
 | 2        | 8/31 – 9/4    | 3        | Servers Slides · Basic HTTP / Extended HTTP                                             | Simple HTTP Assignment                              |
 | 3        | 9/7 – 9/11    | **2**    | **No Monday (Labor Day)** · Accept Header · Status Codes                                | Streaming Media Assignment                          |
 | 4        | 9/14 – 9/18   | 3        | HEAD Request (M/W) · Body Parse (W/F)                                                   | HTTP API Worksheet · HTTP API Assignment            |
-| 5        | 9/21 – 9/25   | 3        | Project 1 Intro · Nodemon and Webpack · Debugging Demo                                  | HTTP API Assignment II                              |
-| 6        | 9/28 – 10/2   | 3        | **Exam 1 (M)** · Project Work Time (W/F)\*                                              | **Project 1: Milestone**                            |
+| 5        | 9/21 – 9/25   | 3        | Project 1 Intro · Nodemon and Webpack · Debugging Demo + Exam Review                    | HTTP API Assignment II (due Mon 9/28)               |
+| 6        | 9/28 – 10/2   | 3        | Exam Review (M) · **Exam 1 (W)** · Project Work Time (F)\*                              | **Project 1: Milestone**                            |
 | 7        | 10/5 – 10/9   | 3        | Project Work Time (M/W)\* · MVC and HTTP Server Design Slides                           | **Project 1: Final** · HTTP Server Design Worksheet |
 | 8        | 10/12 – 10/16 | **2**    | **No Monday (October Break)** · Simple MVC Controllers · Simple MVC Views and Templates | nothing due                                         |
 | 9        | 10/19 – 10/23 | 3        | Databases Slides · Simple MVC Models (W/F)                                              | Database Worksheet                                  |
