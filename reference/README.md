@@ -16,19 +16,23 @@ Pages get added as the semester goes. If a topic is listed without a link, it do
 
 ---
 
+## Getting started (Weeks 1 and 2)
+
+- [Starting a Node project and deploying it](setup/node-project-and-deploy.md): `npm init`, modules, `package.json` scripts, Heroku, and the GitHub Actions check
+
 ## HTTP servers (Weeks 2 to 4)
 
-- The server scaffold: the `server.js` setup at the top of every demo (`http.createServer`, the port, parsing the URL, routing)
-- Serving files and MIME types (`Content-Type`, `fs.readFile`)
+- [The server scaffold](http/server-scaffold.md): the `server.js` setup at the top of every demo (`http.createServer`, the port, parsing the URL, routing)
+- [Serving files and MIME types](http/serving-files-mime.md): `readFileSync`, `Content-Type`, and why your CSS won't load
 - [Status codes and `respondJSON`](http/status-codes.md): 200 vs 400 vs 404, query parameters, checking the status on the client
 - [The `Accept` header](http/accept-header.md): responding with JSON or XML from the same URL
-- HEAD requests (headers, no body)
+- [HEAD requests](http/head-requests.md): the headers without the body, `curl -I`, and `fetch` with `method: 'HEAD'`
 - [Parsing a POST body](http/parsing-post-body.md): chunks, `Buffer.concat`, URL-encoded vs JSON, 201 vs 204
 
 ## Tooling (Week 5)
 
-- nodemon and webpack
-- Debugging a Node server
+- [nodemon and webpack](tooling/nodemon-webpack.md): automatic restarts, bundling the client, and the scripts in `package.json`
+- [Debugging a Node server](tooling/debugging.md): reading a stack trace, the debugger, and the Network tab
 
 ## Later in the semester
 
