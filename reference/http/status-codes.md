@@ -52,7 +52,7 @@ const badRequest = (request, response) => {
 request.query = Object.fromEntries(parsedUrl.searchParams);
 ```
 
-So `/badRequest?valid=true` gives you `request.query.valid === 'true'`.
+So `/badRequest?valid=true` gives you `request.query.valid === 'true'`. To send a query parameter from a form instead of typing it into the address bar, see [Sending form input in a GET](../client/form-to-query-string.md).
 
 On the client, check `response.status` before you use the body:
 

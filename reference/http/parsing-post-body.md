@@ -270,3 +270,5 @@ const response = await fetch(url, {
 ```
 
 `dataType` comes from the dropdown on the page, and `formData` is either `name=jp&age=40` or the `JSON.stringify` version. The `Content-Type` you send here is what the server's `if` in step 8 checks, so the two sides have to agree. Compare your `client.html` with the done repo's for the rest (the form listener and `handleResponse`).
+
+The GET version of this form puts the same `name=jp&age=40` string in the URL instead of the body. See [Sending form input in a GET](../client/form-to-query-string.md).

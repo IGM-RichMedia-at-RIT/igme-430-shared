@@ -34,6 +34,16 @@ Pages get added as the semester goes. If a topic is listed without a link, it do
 - [nodemon and webpack](tooling/nodemon-webpack.md): automatic restarts, bundling the client, and the scripts in `package.json`
 - [Debugging a Node server](tooling/debugging.md): reading a stack trace, the debugger, and the Network tab
 
+## Project 1: the client page
+
+Your main page needs forms that let someone view, filter, and add data without writing any code. Most of the client pieces are already on the pages above, mixed in with the server code. Here's where each one is:
+
+- [Sending form input in a GET](client/form-to-query-string.md): reading a text box and putting it in the URL as `?name=...`, which is how your filtering endpoint gets its query parameters
+- Stopping the form's built-in submit with `preventDefault`: [HEAD requests](http/head-requests.md), step 7
+- Sending form data in a POST, as URL-encoded or JSON: [Parsing a POST body](http/parsing-post-body.md), "The client side"
+- Sending the `Accept` header, and reading `Content-Type` on the response: [The `Accept` header](http/accept-header.md)
+- Showing a different message for each status code: [Status codes and `respondJSON`](http/status-codes.md), steps 6 and 7
+
 ## Later in the semester
 
 MVC, templates, databases, React, Socket.IO, and the rest get pages when we get there.

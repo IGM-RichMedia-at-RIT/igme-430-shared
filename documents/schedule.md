@@ -18,8 +18,8 @@ date, myCourses wins.
 | 4        | 9/14 – 9/18   | 3        | HEAD Request (M/W) · Body Parse (W/F)                                                   | HTTP API Worksheet · HTTP API Assignment            |
 | 5        | 9/21 – 9/25   | 3        | Project 1 Intro · Nodemon and Webpack · Debugging Demo + Exam Review                    | HTTP API Assignment II (due Mon 9/28)               |
 | 6        | 9/28 – 10/2   | 3        | Exam Review (M) · **Exam 1 (W)** · Project Work Time (F)\*                              | **Project 1: Milestone**                            |
-| 7        | 10/5 – 10/9   | 3        | Project Work Time (M/W)\* · MVC and HTTP Server Design Slides                           | **Project 1: Final** · HTTP Server Design Worksheet |
-| 8        | 10/12 – 10/16 | **2**    | **No Monday (October Break)** · Simple MVC Controllers · Simple MVC Views and Templates | nothing due                                         |
+| 7        | 10/5 – 10/9   | 3        | Project Work Time (M/W)\* · MVC and HTTP Server Design Slides                           | **Project 1: Final**                                |
+| 8        | 10/12 – 10/16 | **2**    | **No Monday (October Break)** · Simple MVC Controllers · Simple MVC Views and Templates | HTTP Server Design Worksheet (moved from Week 7)    |
 | 9        | 10/19 – 10/23 | 3        | Databases Slides · Simple MVC Models (W/F)                                              | Database Worksheet                                  |
 | 10       | 10/26 – 10/30 | 3        | React Components (M/W) · React Hooks and State (W/F)                                    | Simple Models Assignment                            |
 | 11       | 11/2 – 11/6   | 3        | Project 2 Intro · Basic Electron · Basic Socket IO                                      | DomoMaker A, B, and C                               |
