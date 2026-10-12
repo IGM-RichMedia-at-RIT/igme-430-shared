@@ -98,6 +98,71 @@ The student credit from the GitHub Student Developer Pack is $13 a month for 24 
 
 Subscribe to the Eco Dynos plan on your Heroku Billing page. Eco is $5 a month for your whole account, with as many apps as you want, and the apps sleep after 30 minutes with no visitors. Without Eco, each app is a Basic dyno at $7 a month. The first app fits inside the credit, so nothing looks wrong at first, but by the fourth or fifth assignment your card starts getting charged. Go look at your Billing page now and check that it says Eco.
 
+## Projects: adding GitHub Actions to a repo you made yourself
+
+Every homework so far started from a fork, and the fork already had the GitHub Actions check in it. Projects 1 and 2 don't have a starter. If you made your project repo yourself, it has no workflow file, so GitHub never runs anything. The project rubrics still expect a green check on your latest commit, and Project 1 takes 10% off without it.
+
+#### 1. Copy the workflow file
+
+Any homework repo you forked has one. Copy `.github/workflows/node.js.yml` from your HTTP API Assignment II repo into the same spot in your project, at the top level next to `package.json`:
+
+```
+your-project/
+├── .github/
+│   └── workflows/
+│       └── node.js.yml
+├── src/
+├── eslint.config.js
+├── package.json
+└── package-lock.json
+```
+
+Don't edit it. It runs `npm ci` and then `npm test` every time you push to `main` or `master`.
+
+The folder name starts with a dot, so Finder hides it (press Cmd+Shift+. to show hidden files). VS Code shows it normally, so copying it there is easier.
+
+Checkpoint: in VS Code, `.github` sits at the top of your project, not inside `src`.
+
+#### 2. Check `package.json` and ESLint
+
+GitHub runs the same `npm test` you run on your machine, so the scripts from 2A need to be there:
+
+```json
+"scripts": {
+  "start": "node ./src/server.js",
+  "pretest": "eslint ./src --fix",
+  "test": "echo \"Tests complete\""
+},
+```
+
+ESLint has to be a dev dependency (`npm install --save-dev eslint @eslint/js globals`), with `eslint.config.js` at the top level of the project. If you started by copying a homework project, you probably have all of this already.
+
+Checkpoint: `npm test` on your machine ends with `Tests complete`.
+
+#### 3. Commit `package-lock.json`
+
+`npm ci` installs from the lock file and fails without it. Check that your `.gitignore` lists `node_modules/` and not `package-lock.json`.
+
+#### 4. Turn Actions on, if GitHub asks
+
+Open the Actions tab on your repo. If there's a button to enable workflows, click it. A repo you created yourself usually has Actions on already. Forks start with them off.
+
+#### 5. Push and check
+
+```bash
+git add .
+git commit -m "add GitHub Actions workflow"
+git push
+```
+
+Checkpoint: the Actions tab shows a "Node.js CI" run, and your latest commit gets a green check. If the file was already there and you only just turned Actions on, nothing runs until you push again. Push an empty commit (`git commit --allow-empty -m "trigger CI"`, then `git push`), or click "Node.js CI" on the left of the Actions tab and use the "Run workflow" button.
+
+If the check is red, click the run, then the step that failed:
+
+- **`Missing script: "test"`:** go back to step 2.
+- **An error that mentions `package-lock.json`:** go back to step 3.
+- **ESLint errors under `npm test`:** they list a file and line number. Fix those, run `npm test` locally until it passes, and push again.
+
 ## Common mistakes
 
 - **`EADDRINUSE: address already in use :::3000`.** A server is already running on that port, usually one you stopped with Ctrl+Z (that pauses it, it doesn't quit) or left open in another terminal. Your code is fine. Kill the old one: `npx kill-port 3000` works everywhere, or `lsof -ti:3000 | xargs kill -9` on Mac. Stop servers with Ctrl+C. Don't switch to port 3001 to get around it.
@@ -106,7 +171,8 @@ Subscribe to the Eco Dynos plan on your Heroku Billing page. Eco is $5 a month f
 - **`sh: eslint: command not found` when you run `npm test`.** You haven't installed the dev dependencies on this machine, or you deleted `node_modules`. Run `npm install`.
 - **`No files matching the pattern "./src" were found.`** ESLint is installed, but there's nothing in `src` yet. It goes away once `src/server.js` exists.
 - **The GitHub check is red and ESLint passes on your machine.** Look at the `test` script. The default one from `npm init` is `echo "Error: no test specified" && exit 1`, and the `exit 1` fails on purpose. Replace it with `echo "Tests complete"`. Also make sure `package-lock.json` is committed, since `npm ci` refuses to run without it.
-- **Your Actions tab says 0 workflow runs.** Forks come with Actions turned off. Turn them on from the Actions tab, and do it before your first push. Turning them on later doesn't go back and check old pushes, and the starter workflow has no "Run workflow" button. Push an empty commit to start a run: `git commit --allow-empty -m "trigger CI"`, then `git push`.
+- **Your Actions tab says 0 workflow runs.** Forks come with Actions turned off. Turn them on from the Actions tab, and do it before your first push. Turning them on later doesn't go back and check old pushes. Some starter workflows have a "Run workflow" button on the Actions tab (HTTP API Assignment II's does) and some don't (the Basic HTTP class example's doesn't). Pushing an empty commit works either way: `git commit --allow-empty -m "trigger CI"`, then `git push`.
+- **Your project repo has no Actions runs at all.** Projects don't come with a workflow file. See [Projects: adding GitHub Actions to a repo you made yourself](#projects-adding-github-actions-to-a-repo-you-made-yourself).
 - **The starter repo's own checks are red.** Expected. The starter has no `package.json`, so `npm ci` fails. Yours turns green once you commit `package.json` and `package-lock.json`.
 - **Heroku shows "Application error".** Open the logs (More, then View logs, on your app's dashboard). If they say the web process failed to bind to `$PORT`, you hard-coded 3000 instead of using `process.env.PORT`. If they say a module can't be found, you installed a package with `--save-dev` that your app needs while it runs. Heroku removes `devDependencies` after it builds.
 - **You submitted the dashboard link.** Graders need the app's own URL, the one the View button opens (it ends in `herokuapp.com`).
@@ -118,7 +184,7 @@ Subscribe to the Eco Dynos plan on your Heroku Billing page. Eco is $5 a month f
 - **A `Procfile` with `web: node index.js`.** Lots of Heroku tutorials add one. You don't need it: without one, Heroku runs `npm start`.
 - **`heroku create` and `git push heroku main`.** Deploying from the Heroku CLI. It works, but we connect the GitHub repo on the Deploy tab of the dashboard instead.
 - **`.eslintrc.json` and the Airbnb style guide.** The old ESLint config format. We use the newer `eslint.config.js` with ESLint's own `recommended` rules. Old tutorials and older course videos show the old way.
-- **CircleCI, Travis, and others.** Other CI services. We use GitHub Actions, which is already set up in every starter repo.
+- **CircleCI, Travis, and others.** Other CI services. We use GitHub Actions, which is already set up in every homework starter repo. Projects don't have one, so you add it yourself (see the Projects section above).
 - **Render, Railway, Vercel.** Other hosts. They're real options, but assignments are graded on a Heroku link.
 
 ## Redo it
