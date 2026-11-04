@@ -44,10 +44,44 @@ Your main page needs forms that let someone view, filter, and add data without w
 - Sending the `Accept` header, and reading `Content-Type` on the response: [The `Accept` header](http/accept-header.md)
 - Showing a different message for each status code: [Status codes and `respondJSON`](http/status-codes.md), steps 6 and 7
 
+## Express (Week 8)
+
+Express replaces the hand-written server from Weeks 2 to 4. The same jobs (serve files, parse a body, route a URL, answer a 404) each turn into one line.
+
+- [Express: the app and middleware](express/app-and-middleware.md): `express()`, `listen`, compression, static files, body parsing, favicon, and why the `app.use` order matters
+- [Express: routes, controllers, and the 404](express/router-controllers-404.md): the folder map, `router(app)`, `app.get`, exporting controllers, the wildcard and where it has to sit, `res.json`
+- [Handlebars templates and `res.render`](express/handlebars-templates.md): turning the engine on, `{{holes}}`, `#if` and `#each`, escaping, and why the data has to be in `render`
+
+## Databases (Week 9)
+
+- [MongoDB and Mongoose: connect, define a model, save](database/mongoose-connect-schema-save.md): the connection string and the env var, the schema, `new Cat(...).save()` in a `try`, reading `E11000`, Compass, and the restart test
+- [Mongoose queries: find, search, and update](database/mongoose-queries.md): `findOne`, `sort`, `select`, `lean`, 404 on nothing found, `findOneAndUpdate` with `$inc` and `returnDocument`
+- [Setting up MongoDB Atlas](../documents/mongodb-atlas-setup.md): the cloud database for a deployed app. This is a setup doc, not a reference page
+
+## React (Week 10)
+
+- [React: setup, components, and JSX](react/setup-components-jsx.md): the babel rule, `createRoot`, View Source, the JSX rules, components inside components
+- [React: props and `useState`](react/props-and-usestate.md): props, the text box that fights you, why a plain variable doesn't work, state, and the whole function running again
+- [React: `useEffect` and loading data from the server](react/useeffect-and-loading-data.md): `fetch` inside a component, the infinite loop, `[]` vs `[reload]`, `.map` and `key`
+
 ## Desktop apps (Week 11)
 
 - [Electron: the 11B class walkthrough](desktop/electron-11b-walkthrough.md): a window, a locked-down page, preload, React bundled in, talking to a server through the CSP, and packaging a real app. Electron isn't required for any assignment. This page is here so you can recreate the demo, so it's a step-by-step walkthrough instead of the usual format.
 
+## DomoMaker and Project 2: where each piece is
+
+DomoMaker A through D is the Week 8 to 10 material assembled into one app, with login added. Project 2 is the same stack again, on your own idea. Where each piece lives:
+
+- The `app.js` shape in DomoMaker A (compression, static, body parsing, Handlebars, then `router(app)`), plus Helmet and sessions on top: [Express: the app and middleware](express/app-and-middleware.md)
+- `router.js`, `controllers/`, and a controller answering with `res.json({ redirect: '/maker' })`: [Express: routes, controllers, and the 404](express/router-controllers-404.md)
+- The login, signup, and app pages, served with `res.render`: [Handlebars templates](express/handlebars-templates.md)
+- The `Account` and `Domo` models, and saving a new domo inside a `try`: [MongoDB and Mongoose: connect, define a model, save](database/mongoose-connect-schema-save.md)
+- Each user seeing only their own domos (`find` by `owner`, `select`, `lean`), and the `_id` that React needs for `key`: [Mongoose queries](database/mongoose-queries.md)
+- DomoMaker D's toolchain steps (the babel rule, `.babelrc`, two bundles, `createRoot`): [React: setup, components, and JSX](react/setup-components-jsx.md)
+- `App` holding `reloadDomos` in state and handing `triggerReload` down to `DomoForm`: [React: props and `useState`](react/props-and-usestate.md)
+- `DomoList` fetching `/getDomos` inside `useEffect` with `[props.reloadDomos]`, then `.map` with a `key`: [React: `useEffect` and loading data](react/useeffect-and-loading-data.md)
+- Project 2 needs all of the above plus at least five dynamic React components. The sessions and Redis parts (DomoMaker B and C) don't have pages yet; the assignment docs walk through them.
+
 ## Later in the semester
 
-MVC, templates, databases, React, Socket.IO, and the rest get pages when we get there.
+Socket.IO gets a page after Friday of Week 11. Sessions, Redis, Sass, file uploads, and config get pages when we get there.
