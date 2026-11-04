@@ -44,6 +44,10 @@ Your main page needs forms that let someone view, filter, and add data without w
 - Sending the `Accept` header, and reading `Content-Type` on the response: [The `Accept` header](http/accept-header.md)
 - Showing a different message for each status code: [Status codes and `respondJSON`](http/status-codes.md), steps 6 and 7
 
+## Desktop apps (Week 11)
+
+- [Electron: the 11B class walkthrough](desktop/electron-11b-walkthrough.md): a window, a locked-down page, preload, React bundled in, talking to a server through the CSP, and packaging a real app. Electron isn't required for any assignment. This page is here so you can recreate the demo, so it's a step-by-step walkthrough instead of the usual format.
+
 ## Later in the semester
 
 MVC, templates, databases, React, Socket.IO, and the rest get pages when we get there.
