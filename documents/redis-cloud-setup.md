@@ -2,7 +2,7 @@
 
 DomoMaker C keeps your sessions in Redis, so your app needs a Redis database it can reach from your laptop and from Heroku. That's Redis Cloud. You make one free database and end up with one URL, `REDISCLOUD_URL`. You can keep using that same URL for the rest of the DomoMakers and Project 2, and you only get one free database per account anyway.
 
-The Redis Cloud screens changed after the older PDF guide was made, so if something looks different from that guide, go with this one. Skip the signup link in the PDF too.
+The Redis Cloud screens changed after the older guide on myCourses was made, so if something looks different from that guide, go with this one.
 
 **Already have a database and just need the URL?** Skip to [Part 2](#part-2-get-your-url).
 
@@ -55,7 +55,11 @@ redis://default:aBcD1234eFgH5678@mouth-grip-feeling-12345.db.redis.io:12345
 
 ### What about the blue Connect button?
 
-You don't need it. It opens a box with Redis Insight, Redis CLI, and Redis Client, which is where the older guide sent you to get a URL. The **Redis Client** option for Node.js shows sample code with the host and port split apart. Don't paste that into `app.js`. The DomoMaker code reads one URL from `process.env.REDISCLOUD_URL`, so the URL you built above is all it needs.
+You don't need it if you built the URL above. It opens a box with Redis Insight, Redis CLI, and Redis Client.
+
+The older guide has you open **Redis CLI**, copy the command, and delete `redis-cli -u ` from the front. That should leave you with the same URL, so if you already did it that way, you're fine. Just check that the password in it is your real one and not stars or `<password>`.
+
+Skip **Redis Client**. Its Node.js option shows sample code with the host and port split apart. Don't paste that into `app.js`. The DomoMaker code reads one URL from `process.env.REDISCLOUD_URL`.
 
 ---
 
