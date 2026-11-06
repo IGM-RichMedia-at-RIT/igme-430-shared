@@ -68,6 +68,10 @@ Express replaces the hand-written server from Weeks 2 to 4. The same jobs (serve
 
 - [Electron: the 11B class walkthrough](desktop/electron-11b-walkthrough.md): a window, a locked-down page, preload, React bundled in, talking to a server through the CSP, and packaging a real app. Electron isn't required for any assignment. This page is here so you can recreate the demo, so it's a step-by-step walkthrough instead of the usual format.
 
+## Real-time (Week 11)
+
+- [Socket.IO: the 11C class walkthrough](realtime/socket-io-11c-walkthrough.md): the server talking first, two windows chatting with no refresh, and rooms. Socket.IO isn't required for any assignment. This is my teaching guide, shared for anyone who wants to run the demo start to finish, so it's a step-by-step walkthrough instead of the usual format. The note at the top of the page says how it was made.
+
 ## DomoMaker and Project 2: where each piece is
 
 DomoMaker A through D is the Week 8 to 10 material assembled into one app, with login added. Project 2 is the same stack again, on your own idea. Where each piece lives:
@@ -80,8 +84,8 @@ DomoMaker A through D is the Week 8 to 10 material assembled into one app, with 
 - DomoMaker D's toolchain steps (the babel rule, `.babelrc`, two bundles, `createRoot`): [React: setup, components, and JSX](react/setup-components-jsx.md)
 - `App` holding `reloadDomos` in state and handing `triggerReload` down to `DomoForm`: [React: props and `useState`](react/props-and-usestate.md)
 - `DomoList` fetching `/getDomos` inside `useEffect` with `[props.reloadDomos]`, then `.map` with a `key`: [React: `useEffect` and loading data](react/useeffect-and-loading-data.md)
-- Project 2 needs all of the above plus at least five dynamic React components. The sessions and Redis parts (DomoMaker B and C) don't have pages yet; the assignment docs walk through them.
+- Project 2 needs all of the above plus at least five dynamic React components. The sessions and Redis parts (DomoMaker B and C) don't have pages yet; the assignment docs walk through them. For the Redis Cloud signup, use [Setting up Redis Cloud](../documents/redis-cloud-setup.md).
 
 ## Later in the semester
 
-Socket.IO gets a page after Friday of Week 11. Sessions, Redis, Sass, file uploads, and config get pages when we get there.
+Sessions, Redis, Sass, file uploads, and config get pages when we get there.
