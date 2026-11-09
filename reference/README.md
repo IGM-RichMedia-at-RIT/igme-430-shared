@@ -64,6 +64,10 @@ Express replaces the hand-written server from Weeks 2 to 4. The same jobs (serve
 - [React: props and `useState`](react/props-and-usestate.md): props, the text box that fights you, why a plain variable doesn't work, state, and the whole function running again
 - [React: `useEffect` and loading data from the server](react/useeffect-and-loading-data.md): `fetch` inside a component, the infinite loop, `[]` vs `[reload]`, `.map` and `key`
 
+## React and MongoDB together (Week 12)
+
+- [React and MongoDB: the 12A class walkthrough](react/react-mongo-12a-walkthrough.md): a list that reads from Mongo, a form that saves, moving state up with `triggerReload`, a Delete button, and testing your queries in Compass. We didn't finish Delete in class, so that part is here to try on your own
+
 ## Desktop apps (Week 11)
 
 - [Electron: the 11B class walkthrough](desktop/electron-11b-walkthrough.md): a window, a locked-down page, preload, React bundled in, talking to a server through the CSP, and packaging a real app. Electron isn't required for any assignment. This page is here so you can recreate the demo, so it's a step-by-step walkthrough instead of the usual format.
@@ -84,6 +88,7 @@ DomoMaker A through D is the Week 8 to 10 material assembled into one app, with 
 - DomoMaker D's toolchain steps (the babel rule, `.babelrc`, two bundles, `createRoot`): [React: setup, components, and JSX](react/setup-components-jsx.md)
 - `App` holding `reloadDomos` in state and handing `triggerReload` down to `DomoForm`: [React: props and `useState`](react/props-and-usestate.md)
 - `DomoList` fetching `/getDomos` inside `useEffect` with `[props.reloadDomos]`, then `.map` with a `key`: [React: `useEffect` and loading data](react/useeffect-and-loading-data.md)
+- The whole loop built step by step, plus Delete, which DomoMaker doesn't cover: [React and MongoDB: the 12A class walkthrough](react/react-mongo-12a-walkthrough.md)
 - Project 2 needs all of the above plus at least five dynamic React components. The sessions and Redis parts (DomoMaker B and C) don't have pages yet; the assignment docs walk through them. For the Redis Cloud signup, use [Setting up Redis Cloud](../documents/redis-cloud-setup.md).
 
 ## Later in the semester
