@@ -24,9 +24,9 @@ date, myCourses wins.
 | 10       | 10/26 – 10/30 | 3        | React Components (M/W) · React Hooks and State (W/F)                                    | Simple Models Assignment                            |
 | 11       | 11/2 – 11/6   | 3        | Project 2 Intro · Basic Electron · Basic Socket IO                                      | DomoMaker A, B, and C                               |
 | 12       | 11/9 – 11/13  | 3        | React + MongoDB, End to End · Express File Upload · Simple Unit Tests                   | DomoMaker D and E                                   |
-| 13       | 11/16 – 11/20 | 3        | **Exam 2 (M)** · Sass and Gulp (W) · Project 2 Work Time / Flex Topics (F)\*            | **Project 2: Milestone**                            |
+| 13       | 11/16 – 11/20 | 3        | Light Exam Review + Project 2 Work Time (M)\* · **Exam 2 (W)** · Project 2 Work Time (F)\* | **Project 2: Milestone**                            |
 | 14       | 11/23 – 11/27 | **1**    | **No Wednesday or Friday (Thanksgiving)** · Project 2 Work Time (M)\*                   | nothing due                                         |
-| 15       | 11/30 – 12/4  | 3        | Project 2 Work Time / Flex Topics (M/W/F)\*                                             | nothing due                                         |
+| 15       | 11/30 – 12/4  | 3        | Sass and Gulp (M) · Project 2 Work Time / Flex Topics (W/F)\*                           | nothing due                                         |
 | Last day | 12/7          | 1        | Project 2 Work Time / Flex Topics\*                                                     | **Project 2: Final** (due Reading Day, Tue 12/8)    |
 | Finals   | 12/9 – 12/16  | 0        | We do not meet during the final exam period                                             | nothing due                                         |
 

@@ -68,6 +68,10 @@ Express replaces the hand-written server from Weeks 2 to 4. The same jobs (serve
 
 - [React and MongoDB: the 12A class walkthrough](react/react-mongo-12a-walkthrough.md): a list that reads from Mongo, a form that saves, moving state up with `triggerReload`, a Delete button, and testing your queries in Compass. We didn't finish Delete in class, so that part is here to try on your own
 
+## File upload (Week 12)
+
+- [File upload: 12B code](upload/file-upload-12b-code-key.md): just the code from Wednesday's demo, numbered to match the steps in class, for copying if you fall behind. Upload a file into MongoDB, get it back by its `_id`, show it or download it, and send the form with `fetch`
+
 ## Desktop apps (Week 11)
 
 - [Electron: the 11B class walkthrough](desktop/electron-11b-walkthrough.md): a window, a locked-down page, preload, React bundled in, talking to a server through the CSP, and packaging a real app. Electron isn't required for any assignment. This page is here so you can recreate the demo, so it's a step-by-step walkthrough instead of the usual format.
@@ -93,4 +97,4 @@ DomoMaker A through D is the Week 8 to 10 material assembled into one app, with 
 
 ## Later in the semester
 
-Sessions, Redis, Sass, file uploads, and config get pages when we get there.
+Sessions, Redis, Sass, and config get pages when we get there.
